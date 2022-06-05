@@ -1,14 +1,25 @@
 import { useState } from "react";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Section from "./components/Section";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="min-h-screen flex justify-center items-center">
-      <h1 className="text-3xl font-bold text-blue-600">
-      Install & Setup Vite + React + Typescript + Tailwind CSS 3
-      </h1>
-    </div>
+    <>
+      <div className="font-inter bg-slate-300 dark:bg-slate-900">
+        <div className=" m-auto">
+          <Navbar></Navbar>
+          <Hero></Hero>
+        </div>
+        <div className="mx-auto w-11/12 flex flex-row">
+          <Sidebar></Sidebar>
+          <Section></Section>
+        </div>
+      </div>
+    </>
   );
 }
 
